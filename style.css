@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+.carousel-inner {
+    max-height: 600px;
+}
+
+body {
+    max-height: 100vh;
+    width: 100%;
+}
+
+.navbar-wether {
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    align-items: center;
+}
+
+#mg-card-holder {
+    display: flex;
+    /* display: none; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.search-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 5px double black;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.mg-holder {
+    width: 100%;
+    padding: 10px;
+    overflow-x: auto;
+    display: flex;
+    gap: 20px;
+}
+
+#more-holder {
+    width: 100%;
+    min-height: 1250px;
+    background-color: aquamarine;
+}
+
+.mg-all-card-holder {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 200px;
+    padding: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.card img {
+    height: 200px;
+    border-bottom: 3px solid black;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.card ul {
+    padding: 0;
+}
+.card ul li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    border-bottom: 1px solid lightgray;
+    padding: 0px 10px;
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.card ul li span {
+    text-align: right;
+    font-weight: lighter;
+}
+
+.card ul li:last-child {
+    border: none;
+}
+
+.container {
+    margin-top: 1em;
+    justify-content: center;
+}
+
+.card {
+    margin: 10px;
+    font-size: 12px;
+    display: flex;
+    padding: 10px;
+}
+
+.card-img-top {
+    width: 210px;
+    margin: 0;
+}
+
+.yb-books-ranking {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#yb-popular-loan-books {
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 10px; */
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 13.5px;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 7px;
+    margin: 0;
+}
+
+.btn {
+    background-color: white;
+    color: black;
+    border-color: #e2e2e2;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tem {
+    display: flex;
+}
+
+.form-control {
+    width: 1000px;
+    height: 70px;
+}
+
+.d-flex {
+    margin: 100px 0;
+}
+
+.main {
+    justify-content: center;
+}
+
+.yb-popular-loan-books-content {
+    margin: 20px;
+    margin: 20px;
+}
+
+.row {
+    justify-content: center;
+}
+
+.yb-pagination {
+    margin: 20px;
+    padding: 20px;
+}
+
+.chightemp {
+    color: rgba(255, 0, 0, 0.633);
+}
+
+.ctemp {
+    color: rgb(78, 78, 78);
+}
+
+.search-section {
+    display: flex;
+    justify-content: center;
+}
+
+#yb-popular-loan-books-menu {
+    margin: 20px 0;
+}
+
+.sh-searchFilter section {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.filterSelect .form-select {
+    margin-left: 5px;
+    min-width: 160px;
+}
+
+.filterSelect .btn {
+    height: 40px;
+    width: 70px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.filterSelect {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    height: 60px;
+}
+
+.filterBtnSection {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: center;
+    height: 60px;
+}
+
+.filterBtn {
+    background-color: lightgray;
+    opacity: 0.5;
+    display: none;
+}
+
+.search-sh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    width: 80%;
+    height: 20px;;
+}
+
+#modal-content {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.switch {
+    display: none;
+}
+
+#search-input{
+    height: 50px;
+}
+
+#search-btn{
+    height: 50px;
+}
+
+.input-section{
+    display: flex;
+    justify-content: center;
+}
+
+#mg-card-holder{
+    display: none;
+}

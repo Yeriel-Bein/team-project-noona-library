@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>누나 도서관</title>
+        <!-- 부트스트렙 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <!-- 폰트 어썸: 아이콤 가지고 오는 것 -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- 제이쿼리 -->
+        <!-- <script src="/javascript/jquery-3.7.1.min.js" ></script> -->
+        <!-- 현재 문서 스타일 -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="icon" href="./asset/favicon.png" type="image/x-icon"/>
+    </head>
+    <body>
+      <nav class="navbar bg-body-tertiary">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img src="./asset/누나의 도서검색.png"  width="130" height="100">
+            </a>
+            <div class="col-4 navbar-wether">
+              <a class="ctemp">현재: </a>
+              <a class="cicon" width="30" height="24" class="d-inline-block align-text-top" > </a>
+              <a class="clowtemp"> 최저: </a>
+              <a class="chightemp" style="margin-left: 20px;"> 최고: </a>
+            </div>
+          </div>
+        </nav>
+          <!-- 중간 메뉴 -->
+          <main>
+              <!-- 이미지 슬라이드 -->
+              <section class="row">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./asset/slideImage_1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./asset/slideImage_2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./asset/slideImage_3.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="./asset/slideImage_4.png" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+            
+            <div class="container">
+
+                <section class = "input-section">
+                    <div class="input-area col-12 search-sh">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="search-input">
+                            <button class="btn btn-outline-secondary" type="button" id="search-btn">검색</button>
+                        </div>                  
+                    </div>
+                </section>
+
+                <section id = "yb-popular-loan-boos-section">
+                    <div class="sh-searchFilter row">
+                        <div class="col-6 filterSelect">
+                            <section id="yb-popular-loan-books-menu">
+                                <button id = "region" class="btn btn-primary" type="submit">지역</button>
+                                <button id = "age" class="btn btn-primary" type="submit">연령</button>
+                                <button id = "gender" class="btn btn-primary" type="submit">성별</button>
+                            </section>
+                            <section id="filter">
+                                <select id="filterSelectPlace" class="form-select region-menu" aria-label="Default select example">
+                                    <option selected>필터를 선택해주세요</option>
+                                </select>
+                            </section>
+                        </div>
+                        <section class="col-6 filterBtnSection">
+                            <div>
+                                <span class="btn btn-primary filterBtn">지역</span>
+                                <span class="btn btn-primary filterBtn">연령</span>
+                                <span class="btn btn-primary filterBtn">성별</span>
+                            </div>
+                        </section>
+                    </div>
+                    
+                    <section class = "yb-popular-loan-books-content">
+                        <section id="yb-popular-loan-books" class = "row">
+                            <div class = "col-lg-3 col-md-6 col-sm-12">
+                                <div> class="card" style="width: 14.5rem;">
+                                    <h2 class = "yb-books-ranking">순위</h2>
+                                    <img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791168340770.jpg" class="card-img-top" alt="..."> <!-- 책표지 URL-->
+                                    <div class="card-body">
+                                    <h3 class="card-title">도서명</h3>
+                                    <br>
+                                    <p class="card-text">저자명 : </p>
+                                    <p class="card-text">출판사 : </p>
+                                    <p class="card-text">출판년도 : </p>
+                                    </div>
+                                </div>
+                            <div>
+                        </section>
+
+                        <section class = "yb-pagination">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                
+                                </ul>
+                            </nav>
+                        </section>
+                    </section>
+                </section>
+                
+                <section id="mg-card-holder">
+                    <div class="search-info">
+                        <h4>제목 검색 결과</h4>
+                        <button onclick = "moreSearcher('title')">더 보기 -></button>
+                    </div>
+                    <div class="mg-holder" id="title-holder">
+                        
+                    </div>
+
+                    <div class="search-info">
+                        <h4>작가 검색 결과</h4>
+                        <button onclick=" moreSearcher('author')">더 보기 -></button>
+                    </div>
+                    <div class="mg-holder" id="author-holder">
+                        
+                    </div>
+
+                    <div class="search-info">
+                        <h4>키워드 검색 결과</h4>
+                        <button onclick=" moreSearcher('keyword') ">더 보기 -></button>
+                    </div>
+                    <div class="mg-holder" id="keyword-holder">
+                        <!-- <div class="card" onclick="getBookhj('9791161571379')">
+                            <img src="/images/noimage.png" alt="" />
+                            <ul>
+                                <li>제목<span>${aaaaaa}</span></li>
+                                <li>작가<span>${ddddddddd}</span></li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </section>
+              <!-- Button trigger modal @@테스트버튼@@-->
+              
+              <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Launch demo modal
+              </button> -->
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div id="modal-content">
+                          <!-- <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                          <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_4594514%2F45945148623.20240222090841.jpg&type=w216">
+                          </div>
+                          <div class="modal-footer">
+                              <div class="modal-item">    
+                                      <li class="list-group-item">- 랭킹 :${bookList.ranking}</li>
+                                      <li class="list-group-item">- 저자명 :${bookList.authors}</li>
+                                      <li class="list-group-item">- 주제분류 :${bookList.class_nm}</li>
+                                      <li class="list-group-item">- 출판사 :${bookList.publisher}</li>
+                                      <li class="list-group-item">- 책소개 :${bookList.description}</li>
+                                      <li class="list-group-item">- 발행년도 :${bookList.publication_year}</li>
+                                      <li class="list-group-item">- ISBN :${bookList.isbn13}</li>
+                          </div>
+                          </div> -->
+                      </div>
+                  </div>
+              </div>
+          </main>
+
+            <!-- 하단 메뉴 -->
+            <footer>
+                <p></p>
+            </footer>
+        </div>
+
+        <!-- 부트스트렙 -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <!-- 현재 문서 스트립트 -->
+        <script src="/javascript/script.js"></script>
+    </body>
+
+    
+<html>
